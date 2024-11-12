@@ -3,39 +3,38 @@ using namespace std;
 
 int main()
 {
-	int month = 1;
-	string result = "";
-	cout << "請輸入月份 (1-12):";
-	cin >> month;
+	int n;
+	int sum = 0;
+	cout << "請輸入一個正整數n:";
+	cin >> n;
 
-	if (month < 1 || month > 12)
+	//for loop
+	for (int i = 1; i <= n; i++)
 	{
-		cout << "請輸入有效月份" << endl;
+		if (i % 2 == 0) sum += i;
 	}
-	else
+
+	for (int i = 2; i <= n; i += 2)
 	{
-		switch (month)
-		{
-		case 3:
-		case 4:
-		case 5:
-			result = "春季";
-			break;
-		case 6:
-		case 7:
-		case 8:
-			result = "夏季";
-			break;
-		case 9:
-		case 10:
-		case 11:
-			result = "秋季";
-			break;
-		default:
-			result = "冬季";
-			break;
-		}
-		cout << month << "月是" << result << endl;
+		sum += i;
 	}
+
+	//while
+	int i = 1;
+	sum = 0;
+	while (i <= n)
+	{
+		if (1 % 2 == 0)sum += i;
+		i++;
+	}
+
+	//do while
+	do {
+		sum = 0;
+		i += 2;
+	} while (i <= n);
+
+	cout << "1~" << n << "之間所有偶數的何為:" << sum << endl;
+
+
 }
-

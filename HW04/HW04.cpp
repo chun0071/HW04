@@ -1,10 +1,9 @@
-﻿﻿#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 int main()
 {
-	<<<<<< < Updated upstream
-		int month;
+	int month = 1;
 	string result = "";
 	cout << "請輸入月份 (1-12):";
 	cin >> month;
